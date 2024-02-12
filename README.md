@@ -1,4 +1,4 @@
-# Project Title: [Project Name]
+# Project Title: Mental health data analysis
 
 ## Overview
 Briefly describe what this project is about. Include the main objective and potential impact.
