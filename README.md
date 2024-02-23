@@ -1,4 +1,4 @@
-# Project Title: Mental health data analysis
+# Project Title: Tobacco smoking prediction model
 
 ## Overview
 Briefly describe what this project is about. Include the main objective and potential impact.
