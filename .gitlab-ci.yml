@@ -1,5 +1,5 @@
 # The Docker image that will be used to build your app
-image: ruby:2.7
+image: ruby:3.0
 # Correct workflow
 workflow:
   rules:
