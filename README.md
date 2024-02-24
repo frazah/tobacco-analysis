@@ -9,9 +9,19 @@ Instructions on setting up the project environment:
 2. Install dependencies: `pip install -r requirements.txt`
 
 ## Data
-Describe the data used in this project:
-- **Raw Data**: Location and description of the raw data.
-- **Processed Data**: How the raw data is processed/transformed.
+
+- **Raw Data**: Location "./data/raw"
+The raw data includes 2 folders, GYTS (Global Youth Tobacco Survey) and GATS (Global Adult Tobacco Survey).
+They include datasets of survey answers about tobacco consumption and habits aswell as demographic information.
+GATS datasets are in SAS format, GYTS are in MDB format.
+Each column represents the survey question, each question has an ID (we will select only the relevant ones).
+Each row contains all answers of each survey subject.
+
+Furthermore, there's another datasets for smoking habits in the UK that is already in csv format.
+
+- **Processed Data**: 
+GATS data can be used directly through panda libraries, while the GYTS ones have been converted in csv format through the Microsoft Access export wizard.
+
 
 ## Usage
 How to run the project:
