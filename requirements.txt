@@ -1,0 +1,6 @@
+scikit-learn
+scikit-optimize
+pandas
+matplotlib
+seaborn
+pyqt5
