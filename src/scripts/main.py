@@ -50,6 +50,7 @@ def main():
     merged_df = preprocess_dataframes(dataframes, common_columns)
 
     # Define mapping dictionaries
+    
     CR1_dict = {1: 11, 2: 12, 3: 13, 4: 14, 5: 15, 6: 16, 7: 17}
     CR2_dict = {1: "Male", 2: "Female"}
     # CR15_dict = {1: False, 2: False, 3: True, 4: True}
@@ -68,7 +69,7 @@ def main():
     # rename columns
     merged_df.rename(columns={"CR1": "Age"}, inplace=True)
     merged_df.rename(columns={"CR2": "Gender"}, inplace=True)
-    merged_df.rename(columns={"CR8": "Smoke"}, inplace=True)
+    # merged_df.rename(columns={"CR8": "Smoke"}, inplace=True)
     merged_df.rename(columns={"OR45": "SmokingParents"}, inplace=True)
     merged_df.rename(columns={"OR46": "SmokingFriends"}, inplace=True)
     merged_df.rename(columns={"OR1": "WorkingParents"}, inplace=True)
@@ -84,7 +85,7 @@ def main():
     # map_values_and_drop_columns(merged_df, CR1_dict, "CR1","Age")
     # map_values_and_drop_columns(merged_df, CR2_dict, "CR2","Gender")
     # # map_values_and_drop_columns(merged_df, CR15_dict, "CR15")
-    # map_values_and_drop_columns(merged_df, CR8_smoke_dict, "CR8","Smoke")
+    map_values_and_drop_columns(merged_df, CR8_smoke_dict, "CR8","Smoke")
     # map_values_and_drop_columns(merged_df, OR45_dict, "OR45","SmokingParents")
     # map_values_and_drop_columns(merged_df, OR46_dict, "OR46","SmokingFriends")
     # map_values_and_drop_columns(merged_df, OR1_dict, "OR1","WorkingParents")
@@ -146,39 +147,39 @@ def main():
     # # create an instance of the grid search object
     # g1 = GridSearchCV(DecisionTreeClassifier(), parameters, cv=5, n_jobs=-1)
     # g1 = RandomizedSearchCV(DecisionTreeClassifier(), parameters, cv=5, n_iter=1000, random_state=42, n_jobs=-1)
-    g1 = BayesSearchCV(DecisionTreeClassifier(), parameters, cv=5, n_iter=10, random_state=42, n_jobs=-1)
+    # g1 = BayesSearchCV(DecisionTreeClassifier(), parameters, cv=5, n_iter=10, random_state=42, n_jobs=-1)
 
     # conduct grid search over the parameter space
     start_time = time.time()
-    g1.fit(X_train, y_train)
+    # g1.fit(X_train, y_train)
     duration = time.time() - start_time
 
     # show best parameter configuration found for classifier
-    cls_params1 = g1.best_params_
-    print(cls_params1)
+    # cls_params1 = g1.best_params_
+    # print(cls_params1)
 
     # Define the model
-    # model = KNeighborsClassifier()
+    model = KNeighborsClassifier()
     # model = KNeighborsClassifier(n_neighbors=100)
     # model = GaussianNB()
     # model = DecisionTreeClassifier()
-    model = g1.best_estimator_
+    # model = g1.best_estimator_
 
     # Train the model
-    # model.fit(X_train, y_train)
+    model.fit(X_train, y_train)
 
     # Make predictions
     y_pred = model.predict(X_test)
     
-    # print(model.weights)
+    print(model.weights)
 
     # Evaluate the model
     # accuracy = accuracy_score(y_test, y_pred)
     # print("Accuracy:", accuracy)
     print('Accuracy score:', accuracy_score(y_test,y_pred))
-    print('Precision score:', precision_score(y_test,y_pred, average='weighted', zero_division=0))
-    print('Recall score:', recall_score(y_test,y_pred, average='weighted'))
-    print('F1 score:', f1_score(y_test,y_pred, average='weighted'))
+    print('Precision score:', precision_score(y_test,y_pred, average=None))
+    print('Recall score:', recall_score(y_test,y_pred, average=None))
+    print('F1 score:', f1_score(y_test,y_pred, average=None))
     print('Computation time:', duration)
 
     # Confusion matrix
