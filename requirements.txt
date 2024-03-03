@@ -4,5 +4,5 @@ pandas
 matplotlib
 seaborn
 pyqt5
-pycaret
-pycaret[analysis]
+pycaret[full]
+imbalanced-learn
