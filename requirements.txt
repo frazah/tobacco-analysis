@@ -4,3 +4,5 @@ pandas
 matplotlib
 seaborn
 pyqt5
+pycaret
+pycaret[analysis]
