@@ -6,3 +6,4 @@ seaborn
 pyqt5
 pycaret[full]
 imbalanced-learn
+dash==2.6.2

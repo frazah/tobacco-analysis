@@ -1,7 +1,8 @@
 ### Dictionary for the questions in the survey
 
 # How old are you?
-CR1_dict = {1: 11, 2: 12, 3: 13, 4: 14, 5: 15, 6: 16, 7: 17}
+# CR1_dict = {1: 11, 2: 12, 3: 13, 4: 14, 5: 15, 6: 16, 7: 17}
+CR1_dict = {1: "11 years old or younger", 2: "12 years old", 3: "13 years old", 4: "14 years old", 5: "15 years old", 6: "16 years old", 7: "17 years old or older"}
 
 # What is your sex?
 CR2_dict = {1: "Male", 2: "Female"}
