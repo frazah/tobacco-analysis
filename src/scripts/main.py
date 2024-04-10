@@ -15,7 +15,7 @@ from sklearn.model_selection import GridSearchCV, RandomizedSearchCV, train_test
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
-from scripts.data import CR8_smoke_dict, OR45_dict
+from scripts.mapping_answers_dict import CR8_smoke_dict, OR45_dict
 from skopt import BayesSearchCV
 from skopt.space import Real, Integer, Categorical
 
