@@ -6,3 +6,4 @@ seaborn~=0.12.2
 pyqt5~=5.15.10
 pycaret[full]~=3.3.0
 imbalanced-learn~=0.12.2
+jupyter~=1.0.0
