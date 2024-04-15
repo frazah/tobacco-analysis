@@ -26,7 +26,7 @@ def preprocess_dataframes(dataframes, common_columns):
 
 
 # Read dataframes from the folder
-dataframes = read_dataframes("../../data/raw/GYTS/")
+dataframes = read_dataframes("./data/raw/GYTS/")
 
 # Find common columns
 common_columns = get_common_columns(dataframes)
@@ -72,4 +72,4 @@ dataset[boolean_columns] = dataset[boolean_columns].astype('bool')
 dataset.dropna(inplace=True)
 
 # Save the preprocessed dataframe to a CSV file
-dataset.to_csv("../../data/processed/GYTS_dataset.csv", index=False)
+dataset.to_csv("./data/processed/GYTS_dataset.csv", index=False)

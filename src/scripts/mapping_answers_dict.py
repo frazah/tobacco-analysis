@@ -87,7 +87,7 @@ CR42_dict = {1: "More comfortable", 2: "Less comfortable", 3: "No difference"}
 CR33_dict = {1: "Yes", 2: "No", 3: "I don't know"}
 
 # During the past 30 days (one month), did you see any health warnings on cigarette packages?
-CR32_dict = {1: "Yes, but I didn't think much of them", 2: "Yes, and they led me to think about quitting smoking or not starting smoking", 3: "No"}
+CR32_dict = {1: "Yes, but I didn't think much of them", 2: "Yes, they made me consider quitting or avoiding smoking", 3: "No"}
 
 # During the past 30 days (one month), did you see or hear any anti-tobacco media messages on television, radio, internet, billboards, posters, newspapers, magazines, or movies?
 CR30_dict = {1: True, 2: False}

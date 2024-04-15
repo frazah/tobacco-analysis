@@ -715,4 +715,5 @@ $RECYCLE.BIN/
 catboost_info/
 
 # Images in data/processed/multivariate_analysis
-data/processed/multivariate_analysis/*.png
+data/processed/multivariate_analysis/*
+data/processed/univariate_analysis/*
