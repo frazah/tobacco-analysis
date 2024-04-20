@@ -1,4 +1,3 @@
-
 # Dictionary for the columns in the survey
 column_mappings = {
     "CR1": "Age",
@@ -22,6 +21,9 @@ column_mappings = {
     "CR25": "BanTobaccoOutdoors",
     "CR23": "HarmfulPassiveSmoke"
 }
+# make a reverse mapping
+column_mappings_reverse = {v: k for k, v in column_mappings.items()}
+
 
 # Dictionary for the questions in the survey
 # How old are you?
