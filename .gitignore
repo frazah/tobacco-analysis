@@ -717,3 +717,6 @@ catboost_info/
 # Images in data/processed/multivariate_analysis
 data/processed/multivariate_analysis/*
 data/processed/univariate_analysis/*
+
+# .dill files in data/models
+data/models/*.dill
