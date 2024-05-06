@@ -230,6 +230,7 @@ def custom_dashboard(
     display_format: str = "dash",
     categorical_columns = [],
     dashboard_kwargs: Optional[Dict[str, Any]] = None,
+    sample_dimension: int = 100,
     run_kwargs: Optional[Dict[str, Any]] = None,
     **kwargs,
 ):
@@ -264,7 +265,9 @@ def custom_dashboard(
 
     dashboard_kwargs: dict, default = {} (empty dict)
         Dictionary of arguments passed to the ``ExplainerDashboard`` class.
-
+        
+    sample_dimension: int, default = 100
+        Number of samples to be used in the dashboard.
 
     run_kwargs: dict, default = {} (empty dict)
         Dictionary of arguments passed to the ``run`` method of ``ExplainerDashboard``.
@@ -290,14 +293,14 @@ def custom_dashboard(
     seed = pc.get_config("seed")
     # Replacing chars which dash doesn't accept for column name `.` , `{`, `}`
     X_test_df = sample(pc.get_config(
-        'X_test_transformed').copy(), 1000, random_state=seed)
+        'X_test_transformed').copy(), sample_dimension, random_state=seed)
     X_test_df.columns = [
         col.replace(".", "__").replace("{", "__").replace("}", "__")
         for col in X_test_df.columns
     ]
 
     y_test_df = sample(pc.get_config(
-        'y_test_transformed').copy(), 1000, random_state=seed)
+        'y_test_transformed').copy(), sample_dimension, random_state=seed)
 
     onehotencoded = categorical_columns.copy()
     onehotencoded.remove("Gender")
