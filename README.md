@@ -1,7 +1,7 @@
 # Project Title: Tobacco smoking prediction model
 
 ## Overview
-Briefly describe what this project is about. Include the main objective and potential impact.
+This study aims to analyze the factors associated with tobacco consumption among adolescent students, in order to better understand this phenomenon and inform prevention policies. We will use data analysis techniques and machine learning to identify the factors associated with tobacco consumption among adolescent students
 
 ## Installation and Setup
 Instructions on setting up the project environment:
@@ -11,22 +11,23 @@ Instructions on setting up the project environment:
 ## Data
 
 - **Raw Data**: Location "./data/raw"
-The raw data includes 2 folders, GYTS (Global Youth Tobacco Survey) and GATS (Global Adult Tobacco Survey).
-They include datasets of survey answers about tobacco consumption and habits aswell as demographic information.
-GATS datasets are in SAS format, GYTS are in MDB format.
+The raw data includes the GYTS (Global Youth Tobacco Survey) dataset.
+It includes survey answers about tobacco consumption and habits aswell as demographic information.
 Each column represents the survey question, each question has an ID (we will select only the relevant ones).
 Each row contains all answers of each survey subject.
 
-Furthermore, there's another datasets for smoking habits in the UK that is already in csv format.
 
 - **Processed Data**: 
-GATS data can be used directly through panda libraries, while the GYTS ones have been converted in csv format through the Microsoft Access export wizard.
+GYTS data has been converted in csv format through the Microsoft Access export wizard.
+Then using pandas (in the data_preprocessor.py script) it has been exported in a new file with readable columns and values (GYTS_dataset.csv)
 
 
 ## Usage
 How to run the project:
 1. Step-by-step instructions.
-2. Example commands.
+  -Select python 3.11.4 kernel in current IDE
+  -Run the scripts in the src/notebooks folder
+  -The explainer dashboard interface will open locally on the address provided
 
 ## Structure
 - `/data`: Contains raw and processed data.
