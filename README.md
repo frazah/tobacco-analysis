@@ -8,7 +8,7 @@ This study aims to analyze the factors associated with tobacco consumption among
 
 Instructions on setting up the project environment:
 
-1. Clone the repository: `git clone [repository link]`
+1. Clone the repository: `git clone https://gitlab.com/frazah/tobacco-analysis`
 2. Install dependencies: `pip install -r requirements.txt`
 
 ## Data
