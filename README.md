@@ -1,4 +1,4 @@
-# Project Title: Tobacco smoking prediction model
+# Tobacco smoking prediction model
 
 ## Overview
 
