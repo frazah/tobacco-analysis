@@ -60,8 +60,3 @@ How to run the project:
 - `/public`: Folder where GitLab pages will write static website. 
 - `index.html`: Documentation in rich format (e.g., HTML, Markdown, JavaScript), will populate `public`.
 
-## Contact
-
-Students:
-  - [Leonardo Dessì](mailto:leonardo.dessi@studio.unibo.it)
-  - [Francesco Corigliano](mailto:francesco.coriglian2@studio.unibo.it)
