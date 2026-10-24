@@ -1,0 +1,14 @@
+Provate a fare in quest'ordine:
+    split train, val, test;
+    oversampling solo train;
+    pre-processing val, test con dati di train (ad esempio normalizzazione);
+    addestramento con train dataset
+    test su val
+    fine tuning modello finché performance su val è "soddisfacente"
+    test su dataset di test con best model su val
+
+Modifiche dopo consegna:
+- Normalizzare ordinali
+- Rifare analisi multivariata
+- Comportamento su istanze mai viste (imputation type?)
+
